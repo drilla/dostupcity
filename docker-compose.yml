@@ -1,0 +1,26 @@
+version: '3.7'
+services:
+  web:
+    build: .
+    # command: mix phx.server  
+    stdin_open: true
+    volumes:
+      - .:/home/app
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
+    environment:
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      MIX_ENV: ${MIX_ENV}
+      PORT: 4000
+  db:
+   image: postgres:latest
+   ports:
+     - '5433:5432'
+   environment:
+     POSTGRES_USER: ${DB_USER}
+     POSTGRES_PASSWORD: ${DB_PASSWORD} 
+   volumes:
+     - "./data:/var/lib/postgresql/data"

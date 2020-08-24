@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+ @font-face {
+  font-family: 'Circe';
+  src: url('<%= path %>/Circe-Bold.eot');
+  src: url('<%= path %>/Circe-Bold.eot?#iefix') format('embedded-opentype'),
+      url('<%= path %>/Circe-Bold.woff2') format('woff2'),
+      url('<%= path %>/Circe-Bold.woff') format('woff'),
+      url('<%= path %>/Circe-Bold.ttf') format('truetype'),
+      url('<%= path %>/Circe-Bold.svg#Circe-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Circe Extra';
+  src: url('<%= path %>/Circe-ExtraBold.eot');
+  src: url('<%= path %>/Circe-ExtraBold.eot?#iefix') format('embedded-opentype'),
+      url('<%= path %>/Circe-ExtraBold.woff2') format('woff2'),
+      url('<%= path %>/Circe-ExtraBold.woff') format('woff'),
+      url('<%= path %>/Circe-ExtraBold.ttf') format('truetype'),
+      url('<%= path %>/Circe-ExtraBold.svg#Circe-ExtraBold') format('svg');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+body, * {
+  padding: 0;
+  margin: 0;
+
+  /* это охуеть как необходимо чтобы хром напечатал картинки в background*/
+  -webkit-print-color-adjust: exact;
+}
+
+/*охуеть как важно*/
+@page {
+    margin: 0;
+}
+
+.wrap {
+  width: 1122px;
+  height: 753px;
+  position: relative;
+  margin: 0 auto;
+  background-image: -o-linear-gradient(180deg,    #E35131 0%, #FFBD70 92.14%);
+  background-image: linear-gradient(180deg,       #E35131 0%, #FFBD70 92.14%);
+  /* background-image: -webkit-linear-gradient(180deg, #E35131 0%, #FFBD70 92.14%);*/
+}
+
+.wrap2 {
+  background-image: url('<%= path %>/build.svg');
+  background-size: 102%;
+  height: 100%;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+}
+
+.wrap3 {
+  box-sizing: border-box;
+  padding-top: 49px;
+  min-height: 595px;
+  display: flex;
+  flex-direction: column;
+  background-image: url('<%= path %>/sun.svg');
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+.bottomBlock {
+  height: 300px;
+  background-image: url('<%= path %>/union.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100.1%;
+  margin-top: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  width: 100%;
+}
+
+.header {
+  padding-left: 60px;
+  padding-right: 74px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.textSertificat {
+  font-family: 'Circe';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 110%;
+  color: #780D0D;
+  display: inline-block;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.dataUser {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 94px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  margin-top: 53px;
+  margin-bottom: 15px;
+}
+
+.dataUser h3 {
+  font-family: 'Circe';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 85%;
+  color: #780D0D;
+  margin: 0;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.dataUser p {
+  font-family: 'Circe Extra';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 21px;
+  line-height: 110%;
+  text-align: right;
+  color: #FFFFFF;
+  margin: 0;
+  margin-top: 5px;
+}
+
+.imgSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  top: 154px;
+  background: white;
+  height:151px;
+  padding: 0 21px
+}
+
+.imgSection img {
+  height: 27%;
+}
+
+  </style>
+</head>
+<body style="-webkit-print-color-adjust:exact;">
+  <div class="wrap">
+    <div class="wrap2">
+      <div class="wrap3">
+    <div class="header">
+      <img src="<%= path %>/logo.svg" alt="logo.svg">
+      <span class="textSertificat">Сертификат  <br /> участника получает</span>
+    </div>
+
+    <div class="dataUser">
+      <h3><%= fio %></h3>
+      <p>За активное участие в Всероссийской акции «Доступный город». <br />
+        Вместе мы смогли больше. Высоко оцениванием Вашу поддержку и надеемся  <br />
+        на дальнейшее плодотворное сотрудничество в реализации общественно  <br />
+        значимых инициатив.
+      </p>
+    </div>
+
+    <div class="bottomBlock">
+      <div class="imgSection">
+        <img src="<%= path %>/yandex.svg" alt="yandex.svg">
+        <img src="<%= path %>/passengers.svg" alt="passengers.svg">
+        <img src="<%= path %>/onf.svg" alt="onf.svg">
+        <img src="<%= path %>/country.svg" alt="country.svg">
+        <img src="<%= path %>/young.svg" alt="young.svg">
+        <img src="<%= path %>/wings.svg" alt="wings.svg">
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</body>
+</html>
