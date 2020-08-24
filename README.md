@@ -1,12 +1,12 @@
 Backend http api for dostupcity.ru service It's very simple, just a presentation for my skills in:
 
- Elixir Phoenix
- naming and interface skills, code readability
- service responsibilities
- some Ecto (Postgers as db)
- html to pdf
- docker, docker-compose
- testing
+ - Elixir Phoenix
+ - naming and interface skills, code readability
+ - service responsibilities
+ - some Ecto (Postgers as db)
+ - html to pdf
+ - docker, docker-compose
+ - testing
  
  
 about dostupcity
