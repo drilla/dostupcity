@@ -1,21 +1,13 @@
-# Dostup
+Backend http api for dostupcity.ru service It's very simple, just a presentation for my skills in:
 
-**TODO: Add description**
+Elixir Phoenix
+naming and interface skills, code readability
+service responsibilities
+some Ecto (Postgers as db)
+html to pdf
+docker, docker-compose
+about dostupcity
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `town_accessibility` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:town_accessibility, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/town_accessibility](https://hexdocs.pm/town_accessibility).
-
+user registers
+user choose objects to check on accessibility for disabled people
+user marks objects checked (all information about objects should be filled in google maps. Not controlled by application)
